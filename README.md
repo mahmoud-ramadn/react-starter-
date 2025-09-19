@@ -9,21 +9,25 @@ This project follows a well-organized folder structure for better maintainabilit
 ## 🚀 Getting Started
 
 1. Install dependencies:
+
    ```bash
    npm install
    ```
 
 2. Start the development server:
+
    ```bash
    npm run dev
    ```
 
 3. Build for production:
+
    ```bash
    npm run build
    ```
 
 4. Run tests:
+
    ```bash
    npm run test        # Run tests in watch mode
    npm run test:run    # Run tests once
@@ -46,6 +50,7 @@ This project uses Husky to enforce code quality:
 - **pre-push**: Runs full test suite before pushing to remote
 
 Commit message format examples:
+
 - `feat: add new user authentication`
 - `fix: resolve navigation bug`
 - `docs: update README with setup instructions`
@@ -87,15 +92,15 @@ export default defineConfig([
       // other options...
     },
   },
-])
+]);
 ```
 
 You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
 ```js
 // eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+import reactX from 'eslint-plugin-react-x';
+import reactDom from 'eslint-plugin-react-dom';
 
 export default defineConfig([
   globalIgnores(['dist']),
@@ -116,5 +121,5 @@ export default defineConfig([
       // other options...
     },
   },
-])
+]);
 ```
