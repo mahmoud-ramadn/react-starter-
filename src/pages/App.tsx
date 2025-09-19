@@ -1,7 +1,8 @@
 import { useState } from 'react'
-import reactLogo from '../assets/icons/react.svg'
+import reactLogo from '@/assets/icons/react.svg'
 import viteLogo from '/vite.svg'
-import '../styles/components/App.css'
+import '@/styles/components/App.css'
+import { formatNumber, cn } from '@/utils'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -20,9 +21,11 @@ function App() {
       <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg">
         <button 
           onClick={() => setCount((count) => count + 1)}
-          className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition-colors mb-4"
+          className={cn(
+            "bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition-colors mb-4"
+          )}
         >
-          count is {count}
+          count is {formatNumber(count)}
         </button>
         <p className="text-gray-600 dark:text-gray-300">
           Edit <code className="bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded">src/App.tsx</code> and save to test HMR
