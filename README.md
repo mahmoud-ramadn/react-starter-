@@ -23,6 +23,34 @@ This project follows a well-organized folder structure for better maintainabilit
    npm run build
    ```
 
+4. Run tests:
+   ```bash
+   npm run test        # Run tests in watch mode
+   npm run test:run    # Run tests once
+   npm run test:ui     # Run tests with UI
+   ```
+
+5. Code formatting and linting:
+   ```bash
+   npm run lint        # Check for linting issues
+   npm run lint:fix    # Auto-fix linting issues
+   npm run format      # Format code with Prettier
+   ```
+
+## 🪝 Git Hooks (Husky)
+
+This project uses Husky to enforce code quality:
+
+- **pre-commit**: Runs linting, formatting, and tests on staged files
+- **commit-msg**: Validates commit messages follow conventional commit format
+- **pre-push**: Runs full test suite before pushing to remote
+
+Commit message format examples:
+- `feat: add new user authentication`
+- `fix: resolve navigation bug`
+- `docs: update README with setup instructions`
+- `test: add unit tests for user service`
+
 ## 📚 Available Plugins
 
 Currently, two official plugins are available:
